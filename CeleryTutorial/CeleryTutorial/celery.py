@@ -9,7 +9,7 @@ app = Celery('CeleryTutorial')
 
 app.config_from_object('django.conf:settings')
 django.setup()
-app.autodiscover_tasks(lambda : settings.INSTALLED_APPS)
+app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 
 @app.task(bind=True)
